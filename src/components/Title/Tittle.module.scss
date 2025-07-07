@@ -1,0 +1,24 @@
+.Tittle {
+  padding-inline: calc(7% + 3rem);
+  font-family: "Nunito";
+  letter-spacing: 0.5em;
+  line-height: 14px !important;
+  text-transform: uppercase;
+  font-size: 10px !important;
+  color: var(--primary-color);
+}
+@media (min-width: 768px) and (max-width: 1024.98px) {
+  .Tittle {
+    padding-inline: calc(5%) !important;
+  }
+}
+@media (min-width: 425px) and (max-width: 767.99px) {
+  .Tittle {
+    padding-inline: calc(5% + 3rem) !important;
+  }
+}
+@media (max-width: 425.98px) {
+  .Tittle {
+    padding-inline: calc(5% + 2rem) !important;
+  }
+}

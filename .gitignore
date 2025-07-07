@@ -1,0 +1,51 @@
+# Node
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Vite
+.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Env
+.env
+.env.*
+
+# Bun
+bun.lockb
+
+# Misc
+*.local
+*.log
+
+# TypeScript
+*.tsbuildinfo
+
+# Coverage
+coverage/
+
+# Mac system files
+.AppleDouble
+.LSOverride
+Icon?
+
+# Others
+*.swp
+*.tmp
