@@ -78,6 +78,9 @@
   .About {
     width: 100%;
     gap: 1.5rem;
+    p {
+      font-size: 14px;
+    }
     &-container {
       padding: 3rem 1.5rem;
       h2 {

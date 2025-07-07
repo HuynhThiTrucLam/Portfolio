@@ -119,7 +119,7 @@
         font-size: 24px;
       }
       :first-child {
-        margin-top: 1rem;
+        margin-top: 2rem;
         grid-column: 7 / 16;
       }
       :nth-child(2) {
@@ -155,6 +155,13 @@
       height: 60vh;
       :first-child {
         margin-top: 2rem;
+      }
+      h2 {
+        font-size: 30px;
+      }
+      p {
+        font-family: "Gilroy-Regular";
+        font-size: 14px;
       }
     }
     &-circle {
