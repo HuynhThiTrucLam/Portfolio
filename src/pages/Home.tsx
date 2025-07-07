@@ -1,6 +1,5 @@
 import Girl from "../assets/vectors/Girl/Girl";
 import About from "../components/About/About";
-import Tittle from "../components/Title/Tittle";
 import styles from "./Home.module.scss";
 
 const Home = () => {
@@ -26,24 +25,20 @@ const Home = () => {
           </div>
         </div>
         <div className={styles["Home-objective"]}>
-          <div className={styles["Home-objective-container"]}>
-            <div className={styles["Home-objective-top"]}>
-              <h2>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum is simplydummy text of the printing
-              </h2>
-            </div>
-            <div className={styles["Home-objective-bottom"]}>
-              <p>
-                Lorem Ipsum is siLorem Ipsum is simply dummy text of the
-                printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since
-              </p>
-              <p>
-                Lorem Ipsum is siLorem Ipsum is simply dummy text of the
-                printing and typesetting industry. Lorem Ipsum{" "}
-              </p>
-            </div>
+          <h2>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum is simplydummy text of the printing
+          </h2>
+          <div className={styles["Home-objective-text"]}>
+            <p>
+              Lorem Ipsum is siLorem Ipsum is simply dummy text of the printing
+              and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since
+            </p>
+            <p>
+              Lorem Ipsum is siLorem Ipsum is simply dummy text of the printing
+              and typesetting industry. Lorem Ipsum{" "}
+            </p>
           </div>
         </div>
       </div>
