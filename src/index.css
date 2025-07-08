@@ -101,6 +101,13 @@ body {
   letter-spacing: 50%;
 }
 
+@font-face {
+  font-family: "Gilroy-Heavy";
+  src: url("/src/assets/fonts/Gilroy-Heavy.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

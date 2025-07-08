@@ -195,16 +195,28 @@
       height: 90vh;
     }
     &-objective {
+      width: 90%;
       height: 60vh;
+      grid-template-columns: repeat(14, 1fr) !important;
+      grid-template-rows: repeat(6, 1fr);
+      gap: 8px;
+      h2 {
+        font-size: 24px;
+      }
       :first-child {
         margin-top: 2rem;
+        grid-column: 7 / 16;
       }
-      h2 {
-        font-size: 30px;
+      :nth-child(2) {
+        grid-column: 1 / 16;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
       }
       p {
-        font-family: "Gilroy-Regular";
-        font-size: 14px;
+        width: 100%;
+        text-align: justify;
+        line-height: 1.4;
       }
     }
     &-circle {
