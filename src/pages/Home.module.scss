@@ -1,4 +1,5 @@
 .Home {
+  width: 100%;
   &:hover {
     .Home-line {
       animation: slideInFromLeft 4s ease-out forwards;
@@ -101,6 +102,20 @@
       font-size: 12px;
       line-height: 1.4;
       color: var(--primary-color);
+    }
+  }
+  &-projects {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &-frame {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      svg {
+        width: 100%;
+      }
     }
   }
 }

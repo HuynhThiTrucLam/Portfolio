@@ -1,6 +1,10 @@
-const Next = () => {
+interface NextProps {
+  className?: string;
+}
+
+const Next = ({ className }: NextProps) => {
   return (
-    <div>
+    <div className={className}>
       <svg
         width="18"
         height="13"
