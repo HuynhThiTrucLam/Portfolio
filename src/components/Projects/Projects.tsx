@@ -4,6 +4,7 @@ import Tag from "../Tag/Tag";
 import Tittle from "../Title/Tittle";
 import ProjectItem from "./ProjectItem";
 import styles from "./Projects.module.scss";
+import Text from "../../assets/vectors/Text/Text";
 
 const Projects = () => {
   const [activeTag, setActiveTag] = useState<string>("All");
@@ -46,6 +47,9 @@ const Projects = () => {
               />
             ))}
           </div>
+          {/* <div className=" flex justify-end my-20 ">
+            <Text />
+          </div> */}
         </div>
       </div>
     </div>

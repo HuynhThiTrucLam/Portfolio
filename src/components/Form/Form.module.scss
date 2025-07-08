@@ -1,0 +1,157 @@
+.Form {
+  width: 100%;
+  margin-bottom: 5rem;
+  &-container {
+    border-block: 0.5px solid var(--secondary-color);
+    padding-top: 5rem;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc((100% / 6) * 5 + 1.6rem);
+      height: 0;
+      border-top: 0.5px solid var(--secondary-color);
+      z-index: 1;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: calc((100% / 16) * 6);
+      top: 0;
+      bottom: 1rem;
+      height: 100%;
+      border-left: 0.5px solid var(--secondary-color);
+      z-index: 2;
+    }
+  }
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    grid-column: 1 / 7;
+    grid-row: 1 / 4;
+    p {
+      width: 80%;
+      font-size: 14px;
+      font-family: "Gilroy-Medium";
+      color: var(--primary-color);
+      line-height: 1.4;
+    }
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    grid-column: 8 / 17;
+    grid-row: 1 / 5;
+  }
+  &-contact {
+    grid-column: 1 / 8;
+    grid-row: 6 / 7;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    p {
+      color: var(--primary-color);
+      font-family: "Gilroy-Light";
+      font-size: 12px;
+    }
+    img {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &-button {
+    grid-column: 14 / 17;
+    grid-row: 6 / 7;
+
+    button {
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      background: var(--primary-color);
+    }
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 37px;
+        height: 37px;
+      }
+    }
+    &-button-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+@media (max-width: 425.98px) {
+  .Form {
+    margin-bottom: 0;
+    &-container {
+      border-bottom: none;
+      padding-top: 4rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, 1fr);
+      gap: 0;
+      &::after {
+        width: 100%;
+        top: 0;
+      }
+      &::before {
+        left: -10%;
+      }
+    }
+    &-text {
+      width: 90%;
+      margin: 0 auto;
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+      gap: 3rem;
+      p {
+        width: 100%;
+        font-size: 14px;
+        font-family: "Gilroy-Regular";
+        line-height: 1.4;
+      }
+    }
+    &-contact {
+      width: 90%;
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      gap: 1rem;
+      justify-content: flex-end;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+    &-form {
+      margin-top: 1rem;
+      grid-column: 1 / 2;
+      grid-row: 4 / 8;
+    }
+    &-button {
+      justify-self: end;
+      width: 50%;
+      grid-column: 1 / 2;
+      grid-row: 8 / 9;
+    }
+  }
+}

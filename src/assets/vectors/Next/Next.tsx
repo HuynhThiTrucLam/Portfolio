@@ -1,8 +1,9 @@
 interface NextProps {
   className?: string;
+  color?: string;
 }
 
-const Next = ({ className }: NextProps) => {
+const Next = ({ className, color }: NextProps) => {
   return (
     <div className={className}>
       <svg
@@ -14,7 +15,7 @@ const Next = ({ className }: NextProps) => {
       >
         <path
           d="M1.25 6.75H16.75M16.75 6.75L12.75 1.25M16.75 6.75L12.75 11.75"
-          stroke="#2555F5"
+          stroke={color || "#2555F5"}
           stroke-linecap="round"
           stroke-linejoin="round"
         />

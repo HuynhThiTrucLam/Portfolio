@@ -1,6 +1,7 @@
 import Girl from "../assets/vectors/Girl/Girl";
 import About from "../components/About/About";
 import CanDo from "../components/CanDo/CanDo";
+import Form from "../components/Form/Form";
 import Projects from "../components/Projects/Projects";
 import styles from "./Home.module.scss";
 
@@ -67,6 +68,10 @@ const Home = () => {
         {/* projects */}
         <div className={styles["Home-projects"]}>
           <Projects />
+        </div>
+        {/* form */}
+        <div className={styles["Home-form"]}>
+          <Form />
         </div>
       </div>
     </div>
