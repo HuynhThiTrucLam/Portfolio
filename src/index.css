@@ -55,38 +55,48 @@ body {
 
 /* Text variables */
 @font-face {
-  font-family: "Gilroy-Regular";
-  src: url("/src/assets/fonts/Gilroy-Regular.ttf");
+  font-family: "MonaSans-Regular";
+  src: url("/src/assets/fonts/MonaSans-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gilroy-Medium";
-  src: url("/src/assets/fonts/Gilroy-Medium.ttf");
+  font-family: "MonaSans-Medium";
+  src: url("/src/assets/fonts/MonaSans-Medium.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gilroy-Bold";
-  src: url("/src/assets/fonts/SVN-Gilroy-Bold.otf");
+  font-family: "MonaSans-Bold";
+  src: url("/src/assets/fonts/MonaSans-Bold.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gilroy-SemiBold";
-  src: url("/src/assets/fonts/SVN-Gilroy-SemiBold.otf");
+  font-family: "MonaSans-BoldItalic";
+  src: url("/src/assets/fonts/MonaSans-ExtraBoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "MonaSans-SemiBold";
+  src: url("/src/assets/fonts/MonaSans-SemiBold.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gilroy-Light";
-  src: url("/src/assets/fonts/Gilroy-Light.ttf");
+  font-family: "MonaSans-Light";
+  src: url("/src/assets/fonts/MonaSans-Light.ttf");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "MonaSans-LightItalic";
+  src: url("/src/assets/fonts/MonaSans-LightItalic.ttf");
 }
 
 @font-face {
@@ -102,8 +112,8 @@ body {
 }
 
 @font-face {
-  font-family: "Gilroy-Heavy";
-  src: url("/src/assets/fonts/Gilroy-Heavy.ttf");
+  font-family: "MonaSans-ExtraBold";
+  src: url("/src/assets/fonts/MonaSans-ExtraBold.ttf");
   font-weight: normal;
   font-style: normal;
 }

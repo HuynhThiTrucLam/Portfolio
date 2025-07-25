@@ -17,13 +17,49 @@
     width: 100%;
   }
   &-top {
-    width: 17%;
+    width: 100%;
     height: 100vh;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    gap: 1rem;
+    h1 {
+      font-size: 2rem;
+      font-family: "MonaSans-BoldItalic";
+      color: var(--primary-color);
+      text-align: center;
+      line-height: 1.3;
+      letter-spacing: 0.13rem;
+    }
+    svg {
+      width: 14%;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      p {
+        text-align: left;
+        font-size: 0.65rem;
+        font-family: "MonaSans-LightItalic";
+        color: var(--primary-color);
+        box-shadow: 0 12px 40px 0 rgba(177, 197, 247, 0.45);
+        background-color: transparent !important;
+      }
+      & .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        button {
+          width: 64.5%;
+        }
+      }
+    }
   }
   &-about {
     width: 100%;
@@ -32,6 +68,10 @@
     justify-content: center;
     position: relative;
     margin: 4rem 0 10% 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
   }
   &-line {
     width: 100%;
@@ -58,12 +98,25 @@
     }
   }
   &-circle {
-    position: absolute;
-    bottom: -120%;
-    left: 0;
-    transform: translateX(-60%);
-    width: 362px;
-    height: 362px;
+    &-1 {
+      width: 22rem;
+      height: 33rem;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-2 {
+      width: 3rem;
+      height: 3rem;
+      svg {
+        width: 100%;
+        height: 100%;
+        path {
+          stroke-width: 1px;
+        }
+      }
+    }
   }
   &-objective {
     width: 90%;

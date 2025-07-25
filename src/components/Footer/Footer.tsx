@@ -10,31 +10,31 @@ function Footer() {
             <SeeYah />
           </div>
           <div className={styles["Footer-item"]}>
-            <p className="font-[Gilroy-Bold] text-[12px] color-[var(--primary-color)]">
+            <p className="font-[MonaSans-Bold] text-[12px] color-[var(--primary-color)]">
               Information
             </p>
             <div className="flex flex-col gap-[16px]">
               <div className="flex gap-[4px] items-center">
-                <p className="font-[Gilroy-Bold] text-[12px] color-[var(--primary-color)]">
+                <p className="font-[MonaSans-Bold] text-[12px] color-[var(--primary-color)]">
                   Email:{" "}
                 </p>
-                <p className="font-[Gilroy-Medium] text-[12px] color-[var(--primary-color)]">
+                <p className="font-[MonaSans-Medium] text-[12px] color-[var(--primary-color)]">
                   huyn.thi.truclam@gmail.com
                 </p>
               </div>
               <div className="flex gap-[4px] items-center">
-                <p className="font-[Gilroy-Bold] text-[12px] color-[var(--primary-color)]">
+                <p className="font-[MonaSans-Bold] text-[12px] color-[var(--primary-color)]">
                   Phone:{" "}
                 </p>
-                <p className="font-[Gilroy-Medium] text-[12px] color-[var(--primary-color)]">
+                <p className="font-[MonaSans-Medium] text-[12px] color-[var(--primary-color)]">
                   +(84) 366 400 874
                 </p>
               </div>
               <div className="flex gap-[4px] items-center">
-                <p className="font-[Gilroy-Bold] text-[12px] color-[var(--primary-color)]">
+                <p className="font-[MonaSans-Bold] text-[12px] color-[var(--primary-color)]">
                   Address:{" "}
                 </p>
-                <p className="font-[Gilroy-Medium] text-[12px] color-[var(--primary-color)]">
+                <p className="font-[MonaSans-Medium] text-[12px] color-[var(--primary-color)]">
                   Ho Chi Minh City
                 </p>
               </div>
@@ -42,18 +42,18 @@ function Footer() {
           </div>
           <div className={styles["Footer-item"]}></div>
           <div className={styles["Footer-item"]}>
-            <p className="font-[Gilroy-Bold] text-[12px] color-[var(--primary-color)]">
+            <p className="font-[MonaSans-Bold] text-[12px] color-[var(--primary-color)]">
               Role
             </p>
             <div className="flex flex-col gap-[16px]">
-              <p className="font-[Gilroy-Medium] text-[12px] color-[var(--primary-color)]">
+              <p className="font-[MonaSans-Medium] text-[12px] color-[var(--primary-color)]">
                 User Interface Design
               </p>
-              <p className="font-[Gilroy-Medium] text-[12px] color-[var(--primary-color)]">
+              <p className="font-[MonaSans-Medium] text-[12px] color-[var(--primary-color)]">
                 Graphic Design
               </p>
 
-              <p className="font-[Gilroy-Medium] text-[12px] color-[var(--primary-color)]">
+              <p className="font-[MonaSans-Medium] text-[12px] color-[var(--primary-color)]">
                 Frontend Developer
               </p>
             </div>
