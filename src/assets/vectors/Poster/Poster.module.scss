@@ -1,0 +1,32 @@
+.Animate {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  display: flex;
+  justify-content: right;
+  & .next-icon {
+    position: absolute;
+    left: 28%;
+    bottom: 16%;
+    transform: translateX(50%);
+    animation: moveLeftToRight 2s ease-in-out infinite;
+    svg {
+      width: 3rem;
+      path {
+        stroke-width: 2px;
+      }
+    }
+  }
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(50%) translateX(0);
+  }
+  50% {
+    transform: translateX(50%) translateX(10px);
+  }
+  100% {
+    transform: translateX(50%) translateX(0);
+  }
+}

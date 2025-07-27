@@ -15,6 +15,11 @@
     animation: slideInFromLeft 1.5s ease-out forwards;
     transform: translateX(-100%);
     opacity: 0;
+    & .decorate-path {
+      stroke-dasharray: 400; /* Replace 400 with your path's length */
+      stroke-dashoffset: 400;
+      animation: draw-decorate 2s linear forwards;
+    }
 
     svg {
       width: 100%;
@@ -41,5 +46,26 @@
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@keyframes draw-decorate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.CanDo-decorate {
+  .decorate-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: decorate-item-appear 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+}
+
+@keyframes decorate-item-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

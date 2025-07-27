@@ -62,27 +62,53 @@
     }
   }
   &-about {
-    width: 100%;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
     position: relative;
-    margin: 4rem 0 10% 0;
+    width: 90%;
+    height: 90vh;
+    &-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+    }
+    & .decorate-start1 {
+      position: absolute;
+      bottom: 10%;
+      right: 10%;
+      svg {
+        width: 5rem;
+      }
+    }
+    & .decorate-start2 {
+      position: absolute;
+      bottom: 15%;
+      right: 5%;
+      svg {
+        width: 1.5rem;
+      }
+    }
+  }
+  &-mask {
+    width: 40.5%;
+    overflow: hidden;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
+    justify-content: right;
+    svg {
+      width: 70%;
+      height: 70%;
+    }
   }
   &-line {
+    height: 0.5px;
+    background-color: var(--secondary-color);
     width: 100%;
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    width: 100%;
-    height: 0.5px;
-    background-color: var(--secondary-color);
-
     animation: slideInFromLeft 1.5s ease-out forwards;
     transform: translateX(-100%);
     opacity: 0;
@@ -97,27 +123,7 @@
       }
     }
   }
-  &-circle {
-    &-1 {
-      width: 22rem;
-      height: 33rem;
-      svg {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    &-2 {
-      width: 3rem;
-      height: 3rem;
-      svg {
-        width: 100%;
-        height: 100%;
-        path {
-          stroke-width: 1px;
-        }
-      }
-    }
-  }
+
   &-objective {
     width: 90%;
     height: 90vh;

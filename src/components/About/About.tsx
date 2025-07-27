@@ -31,7 +31,7 @@ const About = () => {
 
   return (
     <Carousel className={styles.About} setApi={setApi} opts={{ startIndex: 0 }}>
-      <Tittle title="About me" />
+      <Tittle title="About me" className={styles["About-title"]} />
       <CarouselContent>
         {abouts.map((about: AboutType) => (
           <CarouselItem key={about.index}>
