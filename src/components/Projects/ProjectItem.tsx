@@ -1,55 +1,25 @@
-import Next from "../../assets/vectors/Next/Next";
+import Button from "../Button/Button";
 import styles from "./ProjectItem.module.scss";
 
-interface ProjectItemProps {
-  index: number;
-  title: string;
-  type: string;
-  image: string;
-  date: string;
-  url: string;
-}
-
-const ProjectItem = ({
-  index,
-  title,
-  type,
-  image,
-  date,
-  url,
-}: ProjectItemProps) => {
+const ProjectItem = () => {
   return (
-    <div
-      className={
-        styles.ProjectItem +
-        (index % 2 === 0 ? " " + styles["ProjectItem-even"] : "")
-      }
-      onClick={() => {
-        window.open(url, "_blank");
-      }}
-    >
-      <div className={styles["ProjectItem-index"]}>
-        {index < 10 ? `0${index}` : index}
+    <div className={styles["ProjectItem"]}>
+      <div className={styles["ProjectItem-image"]}>
+        <img
+          src="https://i.pinimg.com/1200x/77/65/c0/7765c038a884f80e239cca434f5d7c5f.jpg"
+          alt=""
+        />
       </div>
-      <div className={styles["ProjectItem-content"]}>
-        <div className="w-full flex flex-col gap-1">
-          <p className={styles["ProjectItem-content-title"]}>{title}</p>
-          <p className={styles["ProjectItem-content-type"]}>{type}</p>
+      <div className={styles["ProjectItem-text"]}>
+        <div className={styles["ProjectItem-no"]}>
+          <p>01</p>
         </div>
-        <div className={styles["ProjectItem-image"]}>
-          <img src={image} alt="project" />
+        <div className={styles["ProjectItem-time"]}>
+          <p>July 2025 - Autumn 2025</p>
         </div>
-        <div className={styles["ProjectItem-links"]}>
-          <p className={styles["ProjectItem-date"]}>
-            {new Date(date).toLocaleDateString("en-US", {
-              month: "long",
-              day: "numeric",
-              year: "numeric",
-            })}
-          </p>
-          <a href={url} target="_blank" rel="noopener noreferrer">
-            <Next className={styles["ProjectItem-links-next"]} />
-          </a>
+
+        <div className={styles["ProjectItem-button"]}>
+          <Button text="See Project" onClick={() => {}} isPrimary></Button>
         </div>
       </div>
     </div>
