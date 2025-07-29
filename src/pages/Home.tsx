@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import penIcon from "../assets/pen.svg";
 import presentIcon from "../assets/present.svg";
 import puzzleIcon from "../assets/puzzle.svg";
@@ -16,7 +16,11 @@ import TitleAbout from "../assets/AboutMe.svg";
 import TitleProjects from "../assets/MyProjects.svg";
 
 const Home = () => {
-  const [projects, setProjects] = useState<Project[]>(projectsMock);
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    setProjects(projectsMock);
+  }, []);
 
   return (
     <div className={styles.Home}>
