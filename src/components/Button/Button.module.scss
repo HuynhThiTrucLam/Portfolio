@@ -12,9 +12,24 @@
   }
   &.primary {
     background-color: var(--primary-color);
+    cursor: pointer;
     p {
       color: var(--white);
       font-family: "MonaSans-SemiBold";
     }
+  }
+  &:hover {
+    background-color: var(--white);
+    border: 0.5px solid var(--primary-color);
+    p {
+      color: var(--primary-color);
+      font-family: "MonaSans-SemiBold";
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .Button {
+    padding: 0.5rem 1rem;
   }
 }

@@ -25,7 +25,14 @@ const About = ({
         <h2>{title}</h2>
       </div>
       <div className={styles["About-description"]}>
-        <p>{description}</p>
+        <p>
+          {description.split("\n").map((line, index) => (
+            <span key={index}>
+              {line}
+              {index < description.split("\n").length - 1 && <br />}
+            </span>
+          ))}
+        </p>
       </div>
       <div className={styles["About-button"]}>
         <Button text={buttonText} onClick={() => {}} isPrimary />

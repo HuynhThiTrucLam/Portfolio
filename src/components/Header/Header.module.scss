@@ -28,10 +28,28 @@
   }
 }
 
-@media (max-width: 425.98px) {
+@media (min-width: 768.99px) and (max-width: 1024.98px) {
+  .Header {
+    &-content {
+      p {
+        font-size: 0.65rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 425px) and (max-width: 768.98px) {
   .Header {
     p {
-      font-size: 12px;
+      font-size: 0.65rem;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .Header {
+    p {
+      font-size: 0.65rem;
     }
   }
 }

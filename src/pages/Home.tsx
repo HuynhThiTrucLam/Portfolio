@@ -1,4 +1,9 @@
+import penIcon from "../assets/pen.svg";
+import presentIcon from "../assets/present.svg";
+import puzzleIcon from "../assets/puzzle.svg";
+import strokeIcon from "../assets/stroke.svg";
 import Girl from "../assets/vectors/Girl/Girl";
+import ProjectPotser from "../assets/vectors/ProjectPoster/ProjectPotser";
 import About from "../components/About/About";
 import Button from "../components/Button/Button";
 import Form from "../components/Form/Form";
@@ -37,6 +42,21 @@ const Home = () => {
                   impactful experiences
                 </span>
               </h2>
+              <div className={styles["line"]}></div>
+              <div className={styles["icons"]}>
+                <div className={styles["item"]}>
+                  <img src={presentIcon} alt="present" />
+                </div>
+                <div className={styles["item"]}>
+                  <img src={puzzleIcon} alt="puzzle" />
+                </div>
+                <div className={styles["item"]}>
+                  <img src={strokeIcon} alt="stroke" />
+                </div>
+                <div className={styles["item"]}>
+                  <img src={penIcon} alt="pen" />
+                </div>
+              </div>
             </div>
             <div className={styles["Home-Objective-link"]}>
               <p>See Projects</p>
@@ -69,14 +89,18 @@ const Home = () => {
                 startTime="2022"
                 endTime="Now"
                 title="Education"
-                description="I am a student at the University of Technology, Ho Chi Minh City. I am a student at the University of Technology, Ho Chi Minh City. I am a student at the University of Technology, Ho Chi Minh City."
+                description="I am currently a third-year undergraduate student majoring in Information Technology at the University of Transport and Communications – Ho Chi Minh City Campus."
                 buttonText="Download CV"
               />
               <About
-                startTime="2022"
-                endTime="Now"
+                startTime="February 2024 "
+                endTime="June 2024"
                 title="Certifications"
-                description="I am a student at the University of Technology, Ho Chi Minh City. I am a student at the University of Technology, Ho Chi Minh City. I am a student at the University of Technology, Ho Chi Minh City."
+                description={`Google UX Design Professional Certificate
+Issued by Coursera / Google
+Completed: [Tháng/Năm]
+Credential ID: [Mã chứng chỉ nếu có]
+Link to Certificate (nếu có thể chia sẻ công khai)`}
                 buttonText="Download CV"
               />
             </div>
@@ -84,9 +108,14 @@ const Home = () => {
         </section>
 
         {/* projects */}
-        <section className={styles["Home-section"]}>
+        <section
+          className={`${styles["Home-section"]} ${styles["Home-projects-section"]}`}
+        >
           <div className={styles["Home-Projects"]}>
             <Tiltle title="My Projects" />
+            <div className={styles["Home-Projects-poster"]}>
+              <ProjectPotser />
+            </div>
             <ProjectItem />
           </div>
         </section>

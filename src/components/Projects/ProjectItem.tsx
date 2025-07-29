@@ -1,3 +1,4 @@
+import Next from "../../assets/vectors/Next/Next";
 import Button from "../Button/Button";
 import styles from "./ProjectItem.module.scss";
 
@@ -9,6 +10,15 @@ const ProjectItem = () => {
           src="https://i.pinimg.com/1200x/77/65/c0/7765c038a884f80e239cca434f5d7c5f.jpg"
           alt=""
         />
+        <p>
+          Lorem Ipsum is siLorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy text ever{" "}
+        </p>
+        <div className={styles["ProjectItem-image-links"]}>
+          <p>See More Details</p>
+          <Next />
+        </div>
       </div>
       <div className={styles["ProjectItem-text"]}>
         <div className={styles["ProjectItem-no"]}>
