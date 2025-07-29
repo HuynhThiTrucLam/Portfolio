@@ -101,6 +101,8 @@
     }
     &-image {
       grid-column: 1 / 17;
+      gap: 1.5rem;
+
       &.reversed {
         grid-column: 1 / 17;
       }
@@ -117,7 +119,6 @@
 
 @media (max-width: 425.99px) {
   .ProjectItem {
-    padding-block: 5rem;
     &-text {
       display: none;
     }
