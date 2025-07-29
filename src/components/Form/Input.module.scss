@@ -42,3 +42,23 @@
     color: var(--primary-color);
   }
 }
+
+@media (min-width: 768.99px) and (max-width: 1024.98px) {
+  .Input {
+    label {
+      font-size: 0.65rem;
+    }
+    input {
+      font-size: 0.65rem;
+    }
+  }
+  .Textarea {
+    label {
+      font-size: 0.65rem;
+    }
+    textarea {
+      height: 110px;
+      font-size: 0.65rem;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 .Form {
   width: 100%;
   margin-bottom: 5rem;
+  margin-top: 8rem;
   &-container {
     border-block: 0.5px solid var(--secondary-color);
     padding-top: 5rem;
@@ -94,6 +95,43 @@
     &-button-icon {
       width: 24px;
       height: 24px;
+    }
+  }
+}
+
+@media (min-width: 768.99px) and (max-width: 1024.98px) {
+  .Form {
+    &-container {
+      height: max-content;
+      grid-template-columns: repeat(13, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      &::after {
+        content: "";
+      }
+      &::before {
+        left: 30%;
+      }
+    }
+    &-text {
+      grid-column: 1 / 6;
+      p {
+        font-family: "MonaSans-Light";
+        font-size: 0.65rem;
+      }
+      &-icon {
+        width: 40%;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &-form {
+      grid-column: 6 / 14;
+      gap: 2rem;
+    }
+    &-button {
+      grid-column: 12 / 14;
     }
   }
 }

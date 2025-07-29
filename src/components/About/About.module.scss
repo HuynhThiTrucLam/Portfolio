@@ -83,25 +83,25 @@
 
 @media (min-width: 425px) and (max-width: 768.98px) {
   .About {
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     max-height: 180px;
     padding-bottom: 1rem;
 
     &-text {
-      grid-column: 3 / 9;
+      grid-column: 4 / 9;
       h2 {
         font-size: 1.3rem;
       }
     }
     &-description {
-      grid-column: 3 / 9;
+      grid-column: 4 / 9;
       p {
         font-size: 0.65rem;
         line-height: 1.8;
       }
     }
     &-button {
-      grid-column: 3 / 9;
+      grid-column: 4 / 9;
     }
   }
 }

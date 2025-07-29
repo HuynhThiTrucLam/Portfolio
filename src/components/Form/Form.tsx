@@ -10,7 +10,7 @@ const Form = () => {
     <div className={styles.Form}>
       <div className={styles["Form-container"]}>
         <div className={styles["Form-text"]}>
-          <Text />
+          <Text className={styles["Form-text-icon"]} />
           <p>
             Lorem Ipsum is siLorem Ipsum is simply dummy text of the printing
             and typesetting industry. Lorem Ipsum has been the industry's
