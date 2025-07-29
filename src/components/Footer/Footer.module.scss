@@ -36,11 +36,98 @@
       padding-left: 3rem;
     }
   }
+  &-title {
+    font-family: "MonaSans-Bold";
+    font-size: 12px;
+    color: var(--primary-color);
+  }
+  &-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &-info-item {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+  &-label {
+    font-family: "MonaSans-Bold";
+    font-size: 12px;
+    color: var(--primary-color);
+  }
+  &-value {
+    font-family: "MonaSans-Light" !important;
+    font-size: 12px;
+    color: var(--primary-color);
+  }
+  &-role-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &-role-item {
+    font-family: "MonaSans-Medium";
+    font-size: 12px;
+    color: var(--primary-color);
+  }
   &-copyright {
     font-family: "MonaSans-SemiBold";
     font-size: 12px;
     color: var(--primary-color);
     text-align: center;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+  .Footer {
+    padding-block: 0.75rem;
+    &-container {
+      gap: 1rem;
+    }
+    p {
+      font-family: "MonaSans-SemiBold";
+    }
+
+    &-item {
+      svg {
+        width: 60%;
+        height: 80%;
+      }
+      padding-block: 2rem;
+      &:not(:first-child) {
+        padding-left: 2rem;
+      }
+      > p {
+        font-family: "MonaSans-Bold";
+      }
+    }
+
+    &-title {
+      font-family: "MonaSans-Bold";
+      font-size: 0.65rem;
+      color: var(--primary-color);
+    }
+    &-label {
+      font-family: "MonaSans-SemiBold";
+      font-size: 0.65rem;
+      color: var(--primary-color);
+    }
+    &-value {
+      font-family: "MonaSans-Light" !important;
+      font-size: 0.65rem;
+      color: var(--primary-color);
+    }
+    &-role-item {
+      font-family: "MonaSans-Light" !important;
+      font-size: 0.65rem;
+    }
+    &-role-container {
+      gap: 0.75rem;
+    }
+    &-info-container {
+      gap: 0.75rem;
+    }
   }
 }
 

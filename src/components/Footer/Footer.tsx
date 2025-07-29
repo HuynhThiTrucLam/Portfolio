@@ -10,52 +10,33 @@ function Footer() {
             <SeeYah />
           </div>
           <div className={styles["Footer-item"]}>
-            <p className="font-[MonaSans-Bold] text-[12px] color-[var(--primary-color)]">
-              Information
-            </p>
-            <div className="flex flex-col gap-[16px]">
-              <div className="flex gap-[4px] items-center">
-                <p className="font-[MonaSans-Bold] text-[12px] color-[var(--primary-color)]">
-                  Email:{" "}
-                </p>
-                <p className="font-[MonaSans-Medium] text-[12px] color-[var(--primary-color)]">
+            <p className={styles["Footer-title"]}>Information</p>
+            <div className={styles["Footer-info-container"]}>
+              <div className={styles["Footer-info-item"]}>
+                <p className={styles["Footer-label"]}>Email: </p>
+                <p className={styles["Footer-value"]}>
                   huyn.thi.truclam@gmail.com
                 </p>
               </div>
-              <div className="flex gap-[4px] items-center">
-                <p className="font-[MonaSans-Bold] text-[12px] color-[var(--primary-color)]">
-                  Phone:{" "}
-                </p>
-                <p className="font-[MonaSans-Medium] text-[12px] color-[var(--primary-color)]">
-                  +(84) 366 400 874
-                </p>
+              <div className={styles["Footer-info-item"]}>
+                <p className={styles["Footer-label"]}>Phone: </p>
+                <p className={styles["Footer-value"]}>+(84) 366 400 874</p>
               </div>
-              <div className="flex gap-[4px] items-center">
-                <p className="font-[MonaSans-Bold] text-[12px] color-[var(--primary-color)]">
-                  Address:{" "}
-                </p>
-                <p className="font-[MonaSans-Medium] text-[12px] color-[var(--primary-color)]">
-                  Ho Chi Minh City
-                </p>
+              <div className={styles["Footer-info-item"]}>
+                <p className={styles["Footer-label"]}>Address: </p>
+                <p className={styles["Footer-value"]}>Ho Chi Minh City</p>
               </div>
             </div>
           </div>
           <div className={styles["Footer-item"]}></div>
           <div className={styles["Footer-item"]}>
-            <p className="font-[MonaSans-Bold] text-[12px] color-[var(--primary-color)]">
-              Role
-            </p>
-            <div className="flex flex-col gap-[16px]">
-              <p className="font-[MonaSans-Medium] text-[12px] color-[var(--primary-color)]">
+            <p className={styles["Footer-title"]}>Role</p>
+            <div className={styles["Footer-role-container"]}>
+              <p className={styles["Footer-role-item"]}>
                 User Interface Design
               </p>
-              <p className="font-[MonaSans-Medium] text-[12px] color-[var(--primary-color)]">
-                Graphic Design
-              </p>
-
-              <p className="font-[MonaSans-Medium] text-[12px] color-[var(--primary-color)]">
-                Frontend Developer
-              </p>
+              <p className={styles["Footer-role-item"]}>Graphic Design</p>
+              <p className={styles["Footer-role-item"]}>Frontend Developer</p>
             </div>
           </div>
         </div>
