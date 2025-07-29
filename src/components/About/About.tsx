@@ -6,6 +6,7 @@ interface AboutProps {
   title: string;
   description: string;
   buttonText: string;
+  link?: string;
 }
 const About = ({
   startTime,
@@ -13,7 +14,15 @@ const About = ({
   title,
   description,
   buttonText,
+  link,
 }: AboutProps) => {
+  const handleClick = () => {
+    if (link) {
+      window.open(link, "_blank");
+    } else {
+      console.log("No link provided");
+    }
+  };
   return (
     <div className={styles["About"]}>
       <div className={styles["About-time"]}>
@@ -35,7 +44,7 @@ const About = ({
         </p>
       </div>
       <div className={styles["About-button"]}>
-        <Button text={buttonText} onClick={() => {}} isPrimary />
+        <Button text={buttonText} onClick={handleClick} isPrimary />
       </div>
     </div>
   );

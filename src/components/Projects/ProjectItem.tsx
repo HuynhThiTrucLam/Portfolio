@@ -2,30 +2,51 @@ import Next from "../../assets/vectors/Next/Next";
 import Button from "../Button/Button";
 import styles from "./ProjectItem.module.scss";
 
-const ProjectItem = () => {
+interface ProjectItemProps {
+  index: number;
+  time: string;
+  name: string;
+  image: string;
+  description: string;
+  link: string;
+  isLeft: boolean;
+}
+
+const ProjectItem = ({
+  index,
+  time,
+  name,
+  image,
+  description,
+  link,
+  isLeft,
+}: ProjectItemProps) => {
   return (
     <div className={styles["ProjectItem"]}>
-      <div className={styles["ProjectItem-image"]}>
-        <img
-          src="https://i.pinimg.com/1200x/77/65/c0/7765c038a884f80e239cca434f5d7c5f.jpg"
-          alt=""
-        />
-        <p>
-          Lorem Ipsum is siLorem Ipsum is simply dummy text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever{" "}
-        </p>
+      <div
+        className={`${styles["ProjectItem-image"]} ${
+          isLeft ? styles["reversed"] : ""
+        }`}
+      >
+        <img src={image} alt={name} />
+        <p>{description}</p>
         <div className={styles["ProjectItem-image-links"]}>
-          <p>See More Details</p>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            See More Details
+          </a>
           <Next />
         </div>
       </div>
-      <div className={styles["ProjectItem-text"]}>
+      <div
+        className={`${styles["ProjectItem-text"]} ${
+          isLeft ? styles["reversed"] : ""
+        }`}
+      >
         <div className={styles["ProjectItem-no"]}>
-          <p>01</p>
+          <p>0{index}</p>
         </div>
         <div className={styles["ProjectItem-time"]}>
-          <p>July 2025 - Autumn 2025</p>
+          <p>{time}</p>
         </div>
 
         <div className={styles["ProjectItem-button"]}>
