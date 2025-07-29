@@ -1,0 +1,22 @@
+# Browsers that we support
+
+last 2 Chrome versions
+last 2 Safari versions
+last 2 Firefox versions
+last 2 Edge versions
+
+# Support browsers with >0.2% usage globally
+> 0.2%
+
+# Exclude dead browsers
+not dead
+
+# Include specific versions for broader compatibility
+Chrome >= 88
+Safari >= 14
+Firefox >= 78
+Edge >= 88
+
+# Support mobile browsers
+iOS >= 14
+Android >= 88 

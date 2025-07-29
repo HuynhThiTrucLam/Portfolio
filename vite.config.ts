@@ -13,4 +13,22 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
+  build: {
+    target: ["chrome88", "safari14", "firefox78", "edge88"],
+    cssTarget: ["chrome88", "safari14", "firefox78", "edge88"],
+    modulePreload: {
+      polyfill: true,
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
+  css: {
+    postcss: "./postcss.config.js",
+  },
+  esbuild: {
+    target: ["chrome88", "safari14", "firefox78", "edge88"],
+  },
 });

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "./utils/browser-compat.css";
+@import "./utils/font-fallbacks.scss";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -9,41 +11,74 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Color variables */
+  /* Color variables with fallbacks */
   --primary-color: #2555f5;
   --secondary-color: #b2c4ff;
   --white: #ffffff;
   --radius: 0.625rem;
+
+  /* Fallback colors for older browsers */
+  --background: #ffffff;
   --background: oklch(1 0 0);
+  --foreground: #242424;
   --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
   --card: oklch(1 0 0);
+  --card-foreground: #242424;
   --card-foreground: oklch(0.145 0 0);
+  --popover: #ffffff;
   --popover: oklch(1 0 0);
+  --popover-foreground: #242424;
   --popover-foreground: oklch(0.145 0 0);
+  --primary: #404040;
   --primary: oklch(0.205 0 0);
+  --primary-foreground: #fafafa;
   --primary-foreground: oklch(0.985 0 0);
+  --secondary: #f5f5f5;
   --secondary: oklch(0.97 0 0);
+  --secondary-foreground: #404040;
   --secondary-foreground: oklch(0.205 0 0);
+  --muted: #f5f5f5;
   --muted: oklch(0.97 0 0);
+  --muted-foreground: #737373;
   --muted-foreground: oklch(0.556 0 0);
+  --accent: #f5f5f5;
   --accent: oklch(0.97 0 0);
+  --accent-foreground: #404040;
   --accent-foreground: oklch(0.205 0 0);
+  --destructive: #dc2626;
   --destructive: oklch(0.577 0.245 27.325);
+  --border: #e5e5e5;
   --border: oklch(0.922 0 0);
+  --input: #e5e5e5;
   --input: oklch(0.922 0 0);
+  --ring: #a3a3a3;
   --ring: oklch(0.708 0 0);
+  --chart-1: #f97316;
   --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: #06b6d4;
   --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: #3b82f6;
   --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: #84cc16;
   --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: #eab308;
   --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: #fafafa;
   --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: #242424;
   --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #404040;
   --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: #fafafa;
   --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: #f5f5f5;
   --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: #404040;
   --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: #e5e5e5;
   --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: #a3a3a3;
   --sidebar-ring: oklch(0.708 0 0);
 }
 
@@ -53,69 +88,87 @@ body {
   font-family: var(--font-family);
 }
 
-/* Text variables */
+/* Improved font loading with fallbacks and font-display */
 @font-face {
   font-family: "MonaSans-Regular";
-  src: url("/src/assets/fonts/MonaSans-Regular.ttf");
+  src: url("/src/assets/fonts/MonaSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "MonaSans-Medium";
-  src: url("/src/assets/fonts/MonaSans-Medium.ttf");
-  font-weight: normal;
+  src: url("/src/assets/fonts/MonaSans-Medium.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "MonaSans-Bold";
-  src: url("/src/assets/fonts/MonaSans-Bold.ttf");
-  font-weight: normal;
+  src: url("/src/assets/fonts/MonaSans-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "MonaSans-BoldItalic";
-  src: url("/src/assets/fonts/MonaSans-ExtraBoldItalic.ttf");
+  src: url("/src/assets/fonts/MonaSans-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "MonaSans-SemiBold";
-  src: url("/src/assets/fonts/MonaSans-SemiBold.ttf");
-  font-weight: normal;
+  src: url("/src/assets/fonts/MonaSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "MonaSans-Light";
-  src: url("/src/assets/fonts/MonaSans-Light.ttf");
-  font-weight: normal;
+  src: url("/src/assets/fonts/MonaSans-Light.ttf") format("truetype");
+  font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "MonaSans-LightItalic";
-  src: url("/src/assets/fonts/MonaSans-LightItalic.ttf");
+  src: url("/src/assets/fonts/MonaSans-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Nunito";
-  src: url("/src/assets/fonts/Nunito-Bold.ttf");
-  letter-spacing: 50%;
+  src: url("/src/assets/fonts/Nunito-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  letter-spacing: 0.5px;
 }
 
 @font-face {
   font-family: "Canela";
-  src: url("/src/assets/fonts/Canela-Light.ttf");
-  letter-spacing: 50%;
+  src: url("/src/assets/fonts/Canela-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  letter-spacing: 0.5px;
 }
 
 @font-face {
   font-family: "MonaSans-ExtraBold";
-  src: url("/src/assets/fonts/MonaSans-ExtraBold.ttf");
-  font-weight: normal;
+  src: url("/src/assets/fonts/MonaSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 
 @theme inline {
@@ -157,36 +210,68 @@ body {
 }
 
 .dark {
+  /* Dark theme fallbacks */
+  --background: #242424;
   --background: oklch(0.145 0 0);
+  --foreground: #fafafa;
   --foreground: oklch(0.985 0 0);
+  --card: #404040;
   --card: oklch(0.205 0 0);
+  --card-foreground: #fafafa;
   --card-foreground: oklch(0.985 0 0);
+  --popover: #404040;
   --popover: oklch(0.205 0 0);
+  --popover-foreground: #fafafa;
   --popover-foreground: oklch(0.985 0 0);
+  --primary: #e5e5e5;
   --primary: oklch(0.922 0 0);
+  --primary-foreground: #404040;
   --primary-foreground: oklch(0.205 0 0);
+  --secondary: #525252;
   --secondary: oklch(0.269 0 0);
+  --secondary-foreground: #fafafa;
   --secondary-foreground: oklch(0.985 0 0);
+  --muted: #525252;
   --muted: oklch(0.269 0 0);
+  --muted-foreground: #a3a3a3;
   --muted-foreground: oklch(0.708 0 0);
+  --accent: #525252;
   --accent: oklch(0.269 0 0);
+  --accent-foreground: #fafafa;
   --accent-foreground: oklch(0.985 0 0);
+  --destructive: #ef4444;
   --destructive: oklch(0.704 0.191 22.216);
+  --border: rgba(255, 255, 255, 0.1);
   --border: oklch(1 0 0 / 10%);
+  --input: rgba(255, 255, 255, 0.15);
   --input: oklch(1 0 0 / 15%);
+  --ring: #737373;
   --ring: oklch(0.556 0 0);
+  --chart-1: #8b5cf6;
   --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: #10b981;
   --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: #eab308;
   --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: #ec4899;
   --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: #f97316;
   --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: #404040;
   --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: #fafafa;
   --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: #8b5cf6;
   --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: #fafafa;
   --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: #525252;
   --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: #fafafa;
   --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: rgba(255, 255, 255, 0.1);
   --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: #737373;
   --sidebar-ring: oklch(0.556 0 0);
 }
 
