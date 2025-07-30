@@ -7,7 +7,7 @@
   padding-bottom: 0.5rem;
   label {
     font-family: "MonaSans-SemiBold";
-    font-size: 14px;
+    font-size: 13px;
     color: var(--primary-color);
   }
   input {
@@ -15,7 +15,7 @@
     outline: none;
     background-color: transparent;
     font-family: "MonaSans-Regular";
-    font-size: 14px;
+    font-size: 13px;
     color: var(--primary-color);
   }
 }
@@ -25,20 +25,20 @@
   max-height: 200px;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   label {
     font-family: "MonaSans-SemiBold";
-    font-size: 14px;
+    font-size: 13px;
     color: var(--primary-color);
   }
   textarea {
-    height: 550px;
+    height: 160px;
     border: 0.5px solid var(--secondary-color);
     outline: none;
     padding: 1rem;
     background-color: transparent;
     font-family: "MonaSans-Regular";
-    font-size: 14px;
+    font-size: 13px;
     color: var(--primary-color);
   }
 }
