@@ -10,7 +10,7 @@ import ProjectPotser from "../assets/vectors/ProjectPoster/ProjectPotser";
 import About from "../components/About/About";
 import Button from "../components/Button/Button";
 import Form from "../components/Form/Form";
-import ProjectItem from "../components/Projects/ProjectItem";
+import ProItem from "../components/Projects/ProItem";
 import Tiltle from "../components/Title/Tittle";
 import { aboutMock, type About as AboutType } from "../services/about";
 import { projectsMock, type Project } from "../services/projects";
@@ -132,7 +132,7 @@ const Home = () => {
             <div className={styles["Home-Projects-poster"]}>
               <ProjectPotser />
             </div>
-            {projects.map((project, index) =>
+            {/* {projects.map((project, index) =>
               index % 2 != 0 ? (
                 <ProjectItem
                   index={index + 1}
@@ -160,7 +160,12 @@ const Home = () => {
                   isLeft={true}
                 />
               )
-            )}
+            )} */}
+            <div className={styles["Home-Projects-items"]}>
+              {projects.map((project, index) => (
+                <ProItem key={project.id} project={project} />
+              ))}
+            </div>
           </div>
         </section>
 

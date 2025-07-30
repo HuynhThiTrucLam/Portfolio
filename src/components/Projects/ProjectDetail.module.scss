@@ -1,34 +1,20 @@
 .ProjectDetail {
-  width: max-content;
+  width: 100%;
+  height: 100%;
 
   &-links {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    gap: 0.5rem;
-    p {
-      width: max-content !important;
-      font-size: 0.65rem !important;
-      color: black !important;
-      font-family: "MonaSans-SemiBold" !important;
-    }
+    justify-content: center;
     svg {
-      width: 1rem;
-      height: 1rem;
+      width: 3rem;
+      height: 3rem;
       path {
-        stroke: black;
-      }
-    }
-    &:hover {
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-      p {
-        font-size: 0.7rem !important;
-      }
-      svg {
-        width: 1.2rem;
-        height: 1.2rem;
+        stroke-width: 1.5px;
+        stroke: var(--primary-color);
       }
     }
   }

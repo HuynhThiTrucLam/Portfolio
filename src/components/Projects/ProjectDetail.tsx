@@ -17,11 +17,8 @@ const ProjectDetail = ({ project }: ProjectDetailProps) => {
   return (
     <div className={styles["ProjectDetail"]}>
       <Drawer>
-        <DrawerTrigger>
-          <div className={styles["ProjectDetail-links"]}>
-            <p>See More Details</p>
-            <Next />
-          </div>
+        <DrawerTrigger className={styles["ProjectDetail-links"]}>
+          <Next />
         </DrawerTrigger>
         <DrawerContent className={styles["ProjectDetail-container"]}>
           <DrawerClose>

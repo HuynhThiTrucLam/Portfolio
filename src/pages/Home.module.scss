@@ -277,6 +277,13 @@
     .mobile-title {
       display: none;
     }
+    &-items {
+      padding: 2rem;
+      background-color: var(--primary-color);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
   }
 
   &-form {
@@ -349,6 +356,9 @@
     &-Projects {
       margin-top: 8rem;
       gap: 3rem;
+      &-items {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
   }
 }
@@ -575,6 +585,9 @@
         right: 0;
         width: 30%;
       }
+      &-items {
+        grid-template-columns: 1fr;
+      }
     }
     &-form {
       height: max-content;
@@ -585,6 +598,26 @@
 @media (max-width: 425px) {
   .Home {
     margin-bottom: 3rem;
+
+    /* Feature detection for scroll-snap on mobile */
+    @supports (scroll-snap-type: y mandatory) {
+      scroll-snap-type: y mandatory;
+
+      &-section {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+
+      // Special handling for projects section to prevent title overflow
+      &-section:nth-child(4) {
+        scroll-snap-align: center;
+      }
+
+      &-projects-section {
+        scroll-snap-align: center;
+        padding-top: 4rem; // Extra padding to ensure title is visible
+      }
+    }
 
     &-section {
       min-height: 0;
@@ -621,6 +654,7 @@
       grid-template-columns: 1fr;
       grid-template-rows: max-content max-content max-content;
       row-gap: 2rem;
+      margin-top: 10rem;
       &-text {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
@@ -629,17 +663,11 @@
           line-height: 1;
         }
         & .line {
-          top: 50%;
-          left: 42%;
+          top: 52%;
+          left: 45%;
         }
         & .icons {
-          bottom: 30%;
-          right: 23%;
-          & .item {
-            width: 1.5rem;
-            height: 1.5rem;
-            margin-left: -4px;
-          }
+          display: none;
         }
       }
       &-link {
@@ -661,6 +689,7 @@
       width: 90%;
       padding-inline: 0;
       padding-bottom: 1rem;
+      margin-top: 7rem;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -700,6 +729,11 @@
         display: block;
         transform: rotate(90deg);
         width: 50%;
+      }
+      &-items {
+        padding: 1rem;
+        grid-template-columns: 1fr;
+        gap: 1rem;
       }
     }
 
