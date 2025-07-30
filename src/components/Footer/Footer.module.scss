@@ -82,6 +82,61 @@
   }
 }
 
+@media screen and (min-width: 1440.98px) {
+  .Footer {
+    &-item {
+      padding-block: 5rem;
+      gap: 3rem;
+
+      &:first-child {
+        border-right: 1px solid var(--secondary-color);
+        grid-column: 1 / 6;
+
+        svg {
+          width: 50%;
+          height: 100%;
+          margin-bottom: 5rem;
+        }
+      }
+      &:nth-child(2) {
+        grid-column: 6 / 11;
+      }
+      &:last-child {
+        grid-column: 12 / 17;
+      }
+    }
+    &-content {
+      grid-template-columns: repeat(16, 1fr);
+      grid-template-rows: 1fr;
+      gap: 1rem;
+    }
+    &-title {
+      font-size: 1.45rem;
+    }
+    &-info-container {
+      gap: 2rem;
+    }
+
+    &-info-item {
+      gap: 1rem;
+    }
+    &-value,
+    &-label {
+      font-size: 1.45rem;
+    }
+
+    &-role-container {
+      gap: 2rem;
+    }
+    &-role-item {
+      font-size: 1.45rem;
+    }
+    &-copyright {
+      font-size: 1.45rem;
+    }
+  }
+}
+
 @media (min-width: 1024px) and (max-width: 1439.98px) {
   .Footer {
     padding-block: 0.75rem;
