@@ -43,6 +43,35 @@
   }
 }
 
+@media screen and (min-width: 1440.98px) {
+  .Input {
+    gap: 3.5rem;
+    border-bottom: 1px solid var(--secondary-color);
+    input {
+      font-size: 1.45rem;
+      color: #7e7e7e;
+    }
+    label {
+      font-family: "MonaSans-Bold";
+      font-size: 1.45rem;
+    }
+  }
+  .Textarea {
+    gap: 2rem;
+    max-height: 50%;
+    label {
+      font-size: 1.45rem;
+      font-family: "MonaSans-Bold";
+    }
+    textarea {
+      height: 200px;
+      color: #7e7e7e;
+      font-size: 1.45rem;
+      border: 1px solid var(--secondary-color);
+    }
+  }
+}
+
 @media (min-width: 768.99px) and (max-width: 1024.98px) {
   .Input {
     label {

@@ -80,6 +80,48 @@
   }
 }
 
+@media screen and (min-width: 1440.98px) {
+  .ProjectItem {
+    padding-block: 6rem;
+    border-top: 1px solid var(--secondary-color);
+    &-no {
+      font-size: 4rem;
+    }
+    &-time {
+      font-size: 1.45rem;
+    }
+    &-text {
+      gap: 1rem;
+      &.reversed {
+        gap: 1rem;
+      }
+    }
+    &-image {
+      grid-column: 1 / 8;
+      gap: 1rem;
+      p {
+        width: 90%;
+        font-size: 1.35rem;
+        font-family: "MonaSans-Regular";
+        line-height: 1.6;
+      }
+      &-links {
+        a {
+          font-size: 1.2rem;
+        }
+        svg {
+          width: 1.45rem;
+          height: 1.45rem;
+        }
+      }
+
+      &.reversed {
+        grid-column: 10 / 17;
+      }
+    }
+  }
+}
+
 @media (min-width: 768.99px) and (max-width: 1024.98px) {
   .ProjectItem {
     &-no {

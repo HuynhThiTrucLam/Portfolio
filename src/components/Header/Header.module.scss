@@ -28,6 +28,22 @@
   }
 }
 
+@media screen and (min-width: 1440.98px) {
+  .Header {
+    &-container {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      width: 90%;
+    }
+    &-content {
+      padding-bottom: 1.5rem;
+      p {
+        font-size: 1.45rem;
+      }
+    }
+  }
+}
+
 @media (min-width: 768.99px) and (max-width: 1024.98px) {
   .Header {
     &-content {

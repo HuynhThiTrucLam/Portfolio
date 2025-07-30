@@ -55,6 +55,35 @@
   }
 }
 
+@media screen and (min-width: 1440.98px) {
+  .About {
+    max-height: 30%;
+    border-bottom: 1px solid var(--secondary-color);
+    &-text {
+      h2 {
+        font-size: 3.5rem;
+      }
+    }
+    &-description {
+      margin-top: 3rem;
+      grid-column: 3 / 8;
+      p {
+        font-size: 1.45rem;
+        font-family: "MonaSans-Regular";
+        line-height: 1.6;
+      }
+    }
+    &-time {
+      span {
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
 @media (min-width: 768.99px) and (max-width: 1024.98px) {
   .About {
     max-height: 195px;

@@ -287,6 +287,72 @@
     justify-content: center;
   }
 }
+
+@media screen and (min-width: 1440.98px) {
+  .Home {
+    &-top {
+      h1 {
+        font-size: 4rem;
+      }
+      &-text {
+        gap: 1rem;
+        p {
+          font-size: 1.45rem;
+        }
+      }
+    }
+    &-Objective {
+      row-gap: 10rem;
+      h2 {
+        font-size: 4rem;
+        line-height: 1.1;
+      }
+      &-text {
+        h2 {
+          font-size: 4rem;
+        }
+        & .line {
+          left: 28%;
+          width: 15%;
+        }
+        & .icons {
+          right: 48%;
+          bottom: 22%;
+          & .item {
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+      }
+      &-box {
+        max-width: 16rem;
+        min-height: 5rem;
+      }
+      &-link {
+        p {
+          font-size: 1.45rem;
+        }
+      }
+      &-CTA {
+        gap: 1.5rem;
+        p {
+          font-family: "MonaSans-Regular";
+          font-size: 1.45rem;
+          line-height: 1.6;
+        }
+      }
+    }
+    &-About {
+      width: 90%;
+      padding: 18rem 0;
+    }
+    &-Projects {
+      margin-top: 8rem;
+      gap: 3rem;
+    }
+  }
+}
+
 @media (min-width: 768.99px) and (max-width: 1024.98px) {
   .Home {
     &-section {

@@ -99,6 +99,61 @@
   }
 }
 
+@media screen and (min-width: 1440.98px) {
+  .Form {
+    margin-top: 12rem;
+    &-container {
+      padding-top: 10rem;
+      &::before {
+        left: 30.5%;
+      }
+      &::after {
+        top: calc((100% / 6) * 5 + 2.6rem);
+      }
+    }
+    &-form {
+      gap: 8rem;
+      grid-column: 7 / 17;
+    }
+    &-text {
+      grid-column: 1 / 6;
+      gap: 5rem;
+      p {
+        width: 80%;
+        font-family: "MonaSans-Light";
+        line-height: 1.6;
+        font-size: 1.45rem;
+      }
+      &-icon {
+        width: 50%;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &-contact {
+      grid-column: 1 / 8;
+      grid-row: 6 / 7;
+      p {
+        font-size: 1.45rem;
+      }
+      img {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+    &-button {
+      button {
+        svg {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 768.99px) and (max-width: 1024.98px) {
   .Form {
     &-container {
