@@ -1,5 +1,5 @@
-import Next from "../../assets/vectors/Next/Next";
 import Button from "../Button/Button";
+import ProjectDetail from "./ProjectDetail";
 import styles from "./ProjectItem.module.scss";
 
 interface ProjectItemProps {
@@ -7,8 +7,10 @@ interface ProjectItemProps {
   time: string;
   name: string;
   image: string;
+  subImage: string;
   description: string;
-  link: string;
+  linkToLive: string;
+  linkToFigma: string;
   isLeft: boolean;
 }
 
@@ -17,8 +19,10 @@ const ProjectItem = ({
   time,
   name,
   image,
+  subImage,
   description,
-  link,
+  linkToLive,
+  linkToFigma,
   isLeft,
 }: ProjectItemProps) => {
   return (
@@ -30,12 +34,18 @@ const ProjectItem = ({
       >
         <img src={image} alt={name} />
         <p>{description}</p>
-        <div className={styles["ProjectItem-image-links"]}>
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            See More Details
-          </a>
-          <Next />
-        </div>
+        <ProjectDetail
+          project={{
+            id: index.toString(),
+            time,
+            name,
+            description,
+            image,
+            subImage,
+            linkToLive,
+            linkToFigma,
+          }}
+        />
       </div>
       <div
         className={`${styles["ProjectItem-text"]} ${

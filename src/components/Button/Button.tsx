@@ -4,12 +4,20 @@ interface ButtonProps {
   text: string;
   onClick: () => void;
   isPrimary?: boolean;
+  className?: string;
 }
 
-const Button = ({ text, onClick, isPrimary = false }: ButtonProps) => {
+const Button = ({
+  text,
+  onClick,
+  isPrimary = false,
+  className,
+}: ButtonProps) => {
   return (
     <div
-      className={`${styles.Button} ${isPrimary ? styles.primary : ""}`}
+      className={`${styles.Button} ${
+        isPrimary ? styles.primary : ""
+      } ${className}`}
       onClick={onClick}
     >
       <p>{text}</p>

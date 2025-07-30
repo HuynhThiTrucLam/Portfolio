@@ -1,34 +1,26 @@
 export type About = {
-  index: number;
-  numberOfItems: number;
   title: string;
   description: string;
-  date: string;
+  startTime: string;
+  endTime: string;
+  link: string;
 };
 
-export const abouts: About[] = [
+export const aboutMock: About[] = [
   {
-    index: 1,
-    numberOfItems: 3,
-    title: "Passionate about creating meaningful digital experiences",
+    title: "Education",
     description:
-      "With over 5 years of experience in web development, I specialize in building modern, responsive applications that solve real-world problems. My journey in tech started with a curiosity about how things work on the web.",
-    date: "Mar 25, 2022",
+      "I am currently a third-year undergraduate student majoring in Information Technology at the University of Transport and Communications – Ho Chi Minh City Campus.",
+    startTime: "June 2022",
+    endTime: "Now",
+    link: "https://www.google.com",
   },
   {
-    index: 2,
-    numberOfItems: 3,
-    title: "Full-stack developer with a focus on user experience",
+    title: "Certifications",
     description:
-      "I believe that great software is built at the intersection of clean code and intuitive design. My expertise spans React, TypeScript, Node.js, and modern web technologies that deliver exceptional user experiences.",
-    date: "Mar 25, 2024",
-  },
-  {
-    index: 3,
-    numberOfItems: 3,
-    title: "Committed to continuous learning and innovation",
-    description:
-      "Technology evolves rapidly, and I stay current with the latest trends and best practices. From performance optimization to accessibility, I ensure every project meets the highest standards of quality and maintainability.",
-    date: "Mar 20, 2025",
+      "Google UX Design Professional Certificate\nIssued by Coursera / Google\nCompleted: [Tháng/Năm]\nCredential ID: [Mã chứng chỉ nếu có]\nLink to Certificate (nếu có thể chia sẻ công khai)",
+    startTime: "April 2024",
+    endTime: "May 2024",
+    link: "https://www.google.com",
   },
 ];

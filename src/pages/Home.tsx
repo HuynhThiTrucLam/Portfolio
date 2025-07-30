@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import TitleAbout from "../assets/AboutMe.svg";
+import TitleProjects from "../assets/MyProjects.svg";
 import penIcon from "../assets/pen.svg";
 import presentIcon from "../assets/present.svg";
 import puzzleIcon from "../assets/puzzle.svg";
@@ -10,16 +12,17 @@ import Button from "../components/Button/Button";
 import Form from "../components/Form/Form";
 import ProjectItem from "../components/Projects/ProjectItem";
 import Tiltle from "../components/Title/Tittle";
+import { aboutMock, type About as AboutType } from "../services/about";
 import { projectsMock, type Project } from "../services/projects";
 import styles from "./Home.module.scss";
-import TitleAbout from "../assets/AboutMe.svg";
-import TitleProjects from "../assets/MyProjects.svg";
 
 const Home = () => {
   const [projects, setProjects] = useState<Project[]>([]);
+  const [abouts, setAbouts] = useState<AboutType[]>([]);
 
   useEffect(() => {
     setProjects(projectsMock);
+    setAbouts(aboutMock);
   }, []);
 
   return (
@@ -100,25 +103,17 @@ const Home = () => {
               className={styles["mobile-title"]}
             />
             <div className={styles["Home-About-items"]}>
-              <About
-                startTime="2022"
-                endTime="Now"
-                title="Education"
-                description="I am currently a third-year undergraduate student majoring in Information Technology at the University of Transport and Communications – Ho Chi Minh City Campus."
-                buttonText="Download CV"
-              />
-              <About
-                startTime="April 2024"
-                endTime="May 2024"
-                title="Certifications"
-                description={`Google UX Design Professional Certificate
-Issued by Coursera / Google
-Completed: [Tháng/Năm]
-Credential ID: [Mã chứng chỉ nếu có]
-Link to Certificate (nếu có thể chia sẻ công khai)`}
-                buttonText="See Certificate"
-                link="https://coursera.org/share/10831d5c47d6cbe1e530eb09de81473a"
-              />
+              {abouts.map((about, index) => (
+                <About
+                  key={index}
+                  startTime={about.startTime}
+                  endTime={about.endTime}
+                  title={about.title}
+                  description={about.description}
+                  buttonText="See Certificate"
+                  link={about.link}
+                />
+              ))}
             </div>
           </div>
         </section>
@@ -145,8 +140,10 @@ Link to Certificate (nếu có thể chia sẻ công khai)`}
                   time={project.time}
                   name={project.name}
                   image={project.image}
+                  subImage={project.image}
                   description={project.description}
-                  link={project.link}
+                  linkToLive={project.linkToLive}
+                  linkToFigma={project.linkToFigma}
                   isLeft={false}
                 />
               ) : (
@@ -156,8 +153,10 @@ Link to Certificate (nếu có thể chia sẻ công khai)`}
                   time={project.time}
                   name={project.name}
                   image={project.image}
+                  subImage={project.image}
                   description={project.description}
-                  link={project.link}
+                  linkToLive={project.linkToLive}
+                  linkToFigma={project.linkToFigma}
                   isLeft={true}
                 />
               )

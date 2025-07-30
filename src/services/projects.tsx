@@ -3,8 +3,10 @@ export type Project = {
   name: string;
   time: string;
   image: string;
+  subImage: string;
   description: string;
-  link: string;
+  linkToLive: string;
+  linkToFigma: string;
 };
 
 export const projectsMock: Project[] = [
@@ -14,9 +16,12 @@ export const projectsMock: Project[] = [
     time: "Sep 10, 2024",
     image:
       "https://static.wixstatic.com/media/bb0466_b29ff5e5635748d8a412656cf9a09bc2~mv2.png/v1/fill/w_1310,h_754,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Noir.png",
+    subImage:
+      "https://static.wixstatic.com/media/bb0466_b29ff5e5635748d8a412656cf9a09bc2~mv2.png/v1/fill/w_1310,h_754,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Noir.png",
     description:
       "Lorem Ipsum is siLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
-    link: "https://www.google.com",
+    linkToLive: "https://www.google.com",
+    linkToFigma: "https://www.google.com",
   },
   {
     id: "2",
@@ -24,8 +29,11 @@ export const projectsMock: Project[] = [
     time: "Sep 10, 2024",
     image:
       "https://static.wixstatic.com/media/bb0466_b29ff5e5635748d8a412656cf9a09bc2~mv2.png/v1/fill/w_1310,h_754,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Noir.png",
+    subImage:
+      "https://static.wixstatic.com/media/bb0466_b29ff5e5635748d8a412656cf9a09bc2~mv2.png/v1/fill/w_1310,h_754,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Noir.png",
     description:
       "Lorem Ipsum is siLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
-    link: "https://www.google.com",
+    linkToLive: "https://www.google.com",
+    linkToFigma: "https://www.google.com",
   },
 ];
