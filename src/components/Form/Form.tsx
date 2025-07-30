@@ -12,9 +12,9 @@ const Form = () => {
         <div className={styles["Form-text"]}>
           <Text className={styles["Form-text-icon"]} />
           <p>
-            Lorem Ipsum is siLorem Ipsum is simply dummy text of the printing
-            and typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s standard dummy text
+            With a strong foundation in UI/UX design and front-end development,
+            I’m eager to contribute, learn, and grow in every opportunity. Let’s
+            collaborate to bring impactful digital products to life !
           </p>
         </div>
         <div className={styles["Form-form"]}>
