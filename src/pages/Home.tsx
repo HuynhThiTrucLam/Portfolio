@@ -162,7 +162,7 @@ const Home = () => {
               )
             )} */}
             <div className={styles["Home-Projects-items"]}>
-              {projects.map((project, index) => (
+              {projects.map((project) => (
                 <ProItem key={project.id} project={project} />
               ))}
             </div>
