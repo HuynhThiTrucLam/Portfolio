@@ -18,9 +18,9 @@ export const aboutMock: About[] = [
   {
     title: "Certifications",
     description:
-      "Google UX Design Professional Certificate\nIssued by Coursera / Google\nCompleted: [Tháng/Năm]\nCredential ID: [Mã chứng chỉ nếu có]\nLink to Certificate (nếu có thể chia sẻ công khai)",
+      "Google UX Design Professional Certificate\nIssued by Coursera / Google\nCompleted: May 21, 2024\n",
     startTime: "April 2024",
     endTime: "May 2024",
-    link: "https://www.google.com",
+    link: "https://coursera.org/share/50575527ed0af6f8ca11d8c01a7fdb15",
   },
 ];

@@ -25,6 +25,16 @@ const Home = () => {
     setAbouts(aboutMock);
   }, []);
 
+  const scrollToForm = () => {
+    const formSection = document.getElementById("contact-form");
+    if (formSection) {
+      formSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <div className={styles.Home}>
       <div className={styles["Home-container"]}>
@@ -36,7 +46,7 @@ const Home = () => {
               <h1>I am Truc Lam Huynh</h1>
               <div className={styles["row"]}>
                 <p>Good Design</p>
-                <Button text="Get in touchs" onClick={() => {}} isPrimary />
+                <Button text="Get in touchs" onClick={scrollToForm} isPrimary />
                 <p>Strong Connection</p>
               </div>
             </div>
@@ -76,12 +86,12 @@ const Home = () => {
             </div>
             <div className={styles["Home-Objective-CTA"]}>
               <p>
-                Designing isn’t just my job — it’s my jam. I turn chaos into
+                Designing isn't just my job — it's my jam. I turn chaos into
                 scroll-worthy, sleek magic.
               </p>
               <Button
                 text="Get in touchs"
-                onClick={() => {}}
+                onClick={scrollToForm}
                 isPrimary
               ></Button>
             </div>
@@ -170,7 +180,7 @@ const Home = () => {
         </section>
 
         {/* form */}
-        <section className={styles["Home-section"]}>
+        <section id="contact-form" className={styles["Home-section"]}>
           <div className={styles["Home-form"]}>
             <Form />
           </div>

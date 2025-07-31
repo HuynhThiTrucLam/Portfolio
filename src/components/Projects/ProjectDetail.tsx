@@ -14,6 +14,10 @@ interface ProjectDetailProps {
 }
 
 const ProjectDetail = ({ project }: ProjectDetailProps) => {
+  const handleOpenLink = (link: string) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <div className={styles["ProjectDetail"]}>
       <Drawer>
@@ -29,20 +33,19 @@ const ProjectDetail = ({ project }: ProjectDetailProps) => {
                   <p className={styles["time"]}>{project.time}</p>
                   <p>{project.description}</p>
                   <div className={styles["ProjectDetail-header-CTA"]}>
-                    <Button
-                      isPrimary
-                      text="See Live Action"
-                      onClick={() => {
-                        window.open(project.linkToLive, "_blank");
-                      }}
-                      className={styles["ProjectDetail-header-CTA-button"]}
-                    />
+                    {project.linkToLive !== "" && (
+                      <Button
+                        isPrimary
+                        text="See Live Action"
+                        onClick={() => handleOpenLink(project.linkToLive)}
+                        className={styles["ProjectDetail-header-CTA-button"]}
+                      />
+                    )}
                     <Button
                       text="Open in Figma"
-                      onClick={() => {
-                        window.open(project.linkToFigma, "_blank");
-                      }}
+                      onClick={() => handleOpenLink(project.linkToFigma)}
                       className={styles["ProjectDetail-header-CTA-button"]}
+                      isPrimary={project.linkToLive === ""}
                     />
                   </div>
                 </div>

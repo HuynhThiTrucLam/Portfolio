@@ -20,8 +20,9 @@ export const projectsMock: Project[] = [
       "https://ik.imagekit.io/mku5dcybr/Yup!%20Everything%20on%20Your%20Phone!%20(1).svg?updatedAt=1753927203711",
     description:
       "Lorem Ipsum is siLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
-    linkToLive: "https://www.google.com",
-    linkToFigma: "https://www.google.com",
+    linkToLive: "",
+    linkToFigma:
+      "https://www.figma.com/design/PQE6TnDsO6tFkvvtfbPBpu/Yup?node-id=2263-1862&t=whoxc93T1RaT9Pxu-1",
   },
   {
     id: "2",
@@ -44,7 +45,22 @@ export const projectsMock: Project[] = [
     subImage: "https://ik.imagekit.io/mku5dcybr/Me.png?updatedAt=1753894222146",
     description:
       "Lorem Ipsum is siLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
-    linkToLive: "https://www.google.com",
-    linkToFigma: "https://www.google.com",
+    linkToLive: "",
+    linkToFigma:
+      "https://www.figma.com/design/1ZbA0tZ6xvl7DdpvZaBlCV/Music-Mobile-App--Android-?node-id=94-2888&t=h34IL2iZUfjSwpMO-1",
   },
+  // {
+  //   id: "4",
+  //   name: "EduSprout",
+  //   time: "Feb 01, 2025",
+  //   image:
+  //     "https://ik.imagekit.io/mku5dcybr/EduSprout.svg?updatedAt=1753931322829",
+  //   subImage:
+  //     "https://ik.imagekit.io/mku5dcybr/EduSprout.svg?updatedAt=1753931322829",
+  //   description:
+  //     "Lorem Ipsum is siLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
+  //   linkToLive: "https://edu-sprout.vercel.app",
+  //   linkToFigma:
+  //     "https://www.figma.com/design/SM0kRu3NpUN8MVrPkFprVo/EduSprout?node-id=368-136&t=3RU8YIitVi3SnAH9-1",
+  // },
 ];

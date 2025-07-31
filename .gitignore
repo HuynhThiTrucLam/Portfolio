@@ -49,3 +49,6 @@ Icon?
 # Others
 *.swp
 *.tmp
+
+# Environment variables
+.env
