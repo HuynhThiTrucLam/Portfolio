@@ -437,6 +437,7 @@
     &-Projects {
       width: 90%;
       padding-block: 2rem;
+      margin-bottom: 3rem;
       &-title {
         grid-column: 8 / 13;
       }
@@ -576,6 +577,7 @@
       padding-bottom: 1rem;
       margin-top: 0;
       padding-top: 3rem;
+      margin-bottom: 0;
       &-poster {
         display: none;
       }

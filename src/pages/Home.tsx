@@ -10,6 +10,7 @@ import ProjectPotser from "../assets/vectors/ProjectPoster/ProjectPotser";
 import About from "../components/About/About";
 import Button from "../components/Button/Button";
 import Form from "../components/Form/Form";
+import LoadingOverlay from "../components/LoadingOverlay";
 import ProItem from "../components/Projects/ProItem";
 import Tiltle from "../components/Title/Tittle";
 import { aboutMock, type About as AboutType } from "../services/about";
@@ -19,6 +20,7 @@ import styles from "./Home.module.scss";
 const Home = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [abouts, setAbouts] = useState<AboutType[]>([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setProjects(projectsMock);
@@ -182,10 +184,13 @@ const Home = () => {
         {/* form */}
         <section id="contact-form" className={styles["Home-section"]}>
           <div className={styles["Home-form"]}>
-            <Form />
+            <Form loading={loading} setLoading={setLoading} />
           </div>
         </section>
       </div>
+
+      {/* Loading Overlay */}
+      <LoadingOverlay isVisible={loading} />
     </div>
   );
 };

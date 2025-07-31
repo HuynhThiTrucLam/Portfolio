@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { toast } from "sonner";
 import Linkedin from "../../assets/images/linkedin.png";
 import Telegram from "../../assets/images/telegram.png";
 import Text from "../../assets/vectors/Text/Text";
@@ -6,9 +7,13 @@ import styles from "./Form.module.scss";
 import Input from "./Input";
 import Textarea from "./Textarea";
 import emailjs from "@emailjs/browser";
-import { toast } from "sonner";
 
-const Form = () => {
+interface FormData {
+  loading: boolean;
+  setLoading: (loading: boolean) => void;
+}
+
+const Form = ({ loading, setLoading }: FormData) => {
   const formRef = useRef<HTMLFormElement | null>(null);
   const [formData, setFormData] = useState({
     from_name: "",
@@ -16,7 +21,6 @@ const Form = () => {
     message: "",
     sent_at: new Date().toISOString().split("T")[0],
   });
-  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -55,7 +59,7 @@ const Form = () => {
           publicKey
         ),
       ]);
-      toast.success("Gửi thành công! Bạn sẽ nhận phản hồi qua email.");
+      toast.success("Successfully sent message! I will get back to you soon.");
       setFormData({
         from_name: "",
         from_email: "",
@@ -64,7 +68,7 @@ const Form = () => {
       });
     } catch (error) {
       console.error(error);
-      alert("Đã có lỗi xảy ra. Vui lòng thử lại sau.");
+      toast.error("An error occurred. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -92,6 +96,7 @@ const Form = () => {
             name="from_name"
             value={formData.from_name}
             onChange={handleChange}
+            className={styles["Form-input-name"]}
           />
           <Input
             type="email"
@@ -99,6 +104,7 @@ const Form = () => {
             name="from_email"
             value={formData.from_email}
             onChange={handleChange}
+            className={styles["Form-input-email"]}
           />
           <Textarea
             label="Your message *"
@@ -106,6 +112,7 @@ const Form = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
+            className={styles["Form-input-message"]}
           />
           <input type="hidden" name="sent_at" value={formData.sent_at} />
           <div className={styles["Form-button"]}>

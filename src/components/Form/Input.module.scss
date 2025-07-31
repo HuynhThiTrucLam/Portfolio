@@ -1,5 +1,6 @@
 .Input {
   width: 100%;
+  height: max-content;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -39,7 +40,7 @@
     background-color: transparent;
     font-family: "MonaSans-Regular";
     font-size: 0.65rem;
-    color: var(--primary-color);
+    color: #484545;
   }
 }
 
@@ -58,13 +59,13 @@
   }
   .Textarea {
     gap: 2rem;
-    max-height: 50%;
+    max-height: 100%;
     label {
       font-size: 1.45rem;
       font-family: "MonaSans-Bold";
     }
     textarea {
-      height: 200px;
+      height: 300px;
       color: #7e7e7e;
       font-size: 1.45rem;
       border: 1px solid var(--secondary-color);
