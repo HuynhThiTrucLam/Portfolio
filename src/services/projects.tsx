@@ -15,9 +15,9 @@ export const projectsMock: Project[] = [
     name: "Yup",
     time: "Sep 10, 2024",
     image:
-      "https://ik.imagekit.io/mku5dcybr/Yup!%20Everything%20on%20Your%20Phone!.svg?updatedAt=1753888300585",
+      "https://ik.imagekit.io/mku5dcybr/Yup!%20Everything%20on%20Your%20Phone!%20(1).svg?updatedAt=1753927203711",
     subImage:
-      "https://ik.imagekit.io/mku5dcybr/Yup!%20Everything%20on%20Your%20Phone!.svg?updatedAt=1753888300585",
+      "https://ik.imagekit.io/mku5dcybr/Yup!%20Everything%20on%20Your%20Phone!%20(1).svg?updatedAt=1753927203711",
     description:
       "Lorem Ipsum is siLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever",
     linkToLive: "https://www.google.com",
