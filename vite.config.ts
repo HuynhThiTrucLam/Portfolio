@@ -24,11 +24,18 @@ export default defineConfig({
       },
     },
     minify: "esbuild",
+    // Ensure output directory is explicitly set
+    outDir: "dist",
   },
   css: {
     postcss: "./postcss.config.js",
   },
   esbuild: {
     target: ["chrome88", "safari14", "firefox78", "edge88"],
+  },
+  // Add server configuration for Vercel
+  server: {
+    port: 5173,
+    host: true,
   },
 });
