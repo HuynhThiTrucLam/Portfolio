@@ -1,69 +1,119 @@
-# React + TypeScript + Vite
+# Portfolio - React + TypeScript + Vite + Bun
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern portfolio website built with React, TypeScript, Vite, and deployed using Bun for optimal performance.
 
-Currently, two official plugins are available:
+## 🚀 Quick Start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
 
-## Expanding the ESLint configuration
+- [Bun](https://bun.sh/) (recommended) or Node.js 18+
+- Git
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Development
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **Clone the repository**
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+   ```bash
+   git clone <your-repo-url>
+   cd portfolio
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. **Install dependencies**
+
+   ```bash
+   bun install
+   ```
+
+3. **Start development server**
+
+   ```bash
+   bun run dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:5173`
+
+### Building for Production
+
+```bash
+# Build the project
+bun run build
+
+# Preview the production build
+bun run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project is configured for deployment with Bun on Vercel:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Automatic deployment**: Push to your main branch and Vercel will automatically deploy using Bun
+2. **Manual deployment**: Use the provided deployment script
+   ```bash
+   ./deploy.sh
+   ```
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 19 + TypeScript
+- **Build Tool**: Vite
+- **Package Manager**: Bun
+- **Styling**: Tailwind CSS + SCSS
+- **Deployment**: Vercel
+- **UI Components**: Radix UI + Custom components
+- **Animations**: Lottie React
+- **Icons**: Lucide React
+
+## 📁 Project Structure
+
 ```
+src/
+├── components/     # Reusable UI components
+├── pages/         # Page components
+├── assets/        # Static assets (images, fonts, SVGs)
+├── layouts/       # Layout components
+├── services/      # API and external services
+├── utils/         # Utility functions
+└── routes/        # Routing configuration
+```
+
+## 🔧 Configuration Files
+
+- `vercel.json` - Vercel deployment configuration (optimized for Bun)
+- `.bunfig.toml` - Bun-specific configuration
+- `vite.config.ts` - Vite build configuration
+- `tailwind.config.js` - Tailwind CSS configuration
+
+## 🚀 Performance Optimizations
+
+- **Bun**: Faster package installation and builds
+- **Vite**: Lightning-fast development server and optimized builds
+- **Code Splitting**: Automatic chunk splitting for better loading performance
+- **Asset Optimization**: Compressed images and optimized fonts
+
+## 📝 Available Scripts
+
+- `bun run dev` - Start development server
+- `bun run build` - Build for production
+- `bun run preview` - Preview production build
+- `bun run lint` - Run ESLint
+
+## 🌐 Deployment
+
+The project is configured to deploy automatically on Vercel using Bun:
+
+- **Build Command**: `bun run build`
+- **Install Command**: `bun install --frozen-lockfile`
+- **Output Directory**: `dist`
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test with `bun run build`
+5. Submit a pull request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).

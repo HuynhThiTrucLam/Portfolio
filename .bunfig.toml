@@ -1,0 +1,12 @@
+[install]
+# Use exact versions for reproducible builds
+exact = false
+
+[install.scopes]
+# Configure any scoped packages if needed
+
+[test]
+# Test configuration if needed
+
+[run]
+# Run configuration 
