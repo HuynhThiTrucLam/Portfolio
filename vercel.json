@@ -6,11 +6,6 @@
   "env": {
     "NODE_ENV": "production"
   },
-  "functions": {
-    "app/api/**/*.ts": {
-      "runtime": "nodejs18.x"
-    }
-  },
   "builds": [
     {
       "src": "package.json",
