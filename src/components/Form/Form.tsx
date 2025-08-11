@@ -149,9 +149,9 @@ const Form = ({ loading, setLoading }: FormData) => {
             >
               <img src={Linkedin} alt="Linkedin" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            {/* <a href="#" target="_blank" rel="noopener noreferrer">
               <img src={Telegram} alt="Telegram" />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
