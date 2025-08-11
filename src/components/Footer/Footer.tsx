@@ -14,9 +14,7 @@ function Footer() {
             <div className={styles["Footer-info-container"]}>
               <div className={styles["Footer-info-item"]}>
                 <p className={styles["Footer-label"]}>Email: </p>
-                <p className={styles["Footer-value"]}>
-                  huyn.thi.truclam@gmail.com
-                </p>
+                <p className={styles["Footer-value"]}>lam.huynthi@gmail.com</p>
               </div>
               <div className={styles["Footer-info-item"]}>
                 <p className={styles["Footer-label"]}>Phone: </p>
